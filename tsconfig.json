@@ -1,0 +1,17 @@
+{
+  "include": ["**/src/**/*.ts"],
+  "exclude": [],
+  "compilerOptions": {
+    "noEmit": false,
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true
+  }
+}

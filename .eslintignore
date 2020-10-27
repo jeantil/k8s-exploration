@@ -1,0 +1,7 @@
+.next
+.firebase
+.git
+.secret
+.vscode
+**/node_modules/*
+**/dist/*

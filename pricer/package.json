@@ -1,0 +1,8 @@
+{
+  "private": "true",
+  "name": "@k8s-demo-byjean/pricer-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "@k8s-demo-byjean/http": "*"
+  }
+}
