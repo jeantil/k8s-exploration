@@ -1,0 +1,6 @@
+{
+  "name": "@k8s-demo-byjean/ops",
+  "dependencies": {
+    "@kubernetes/client-node": "^0.12.3"
+  }
+}

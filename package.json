@@ -11,8 +11,8 @@
     "@k8s-demo-byjean/tooling": "*"
   },
   "scripts": {
-    "build:cruder": "APP_NAME=cruder; docker build --build-arg APP_NAME=${APP_NAME} . -t jeantil/k8s-demo-${APP_NAME}:$(git describe --always --dirty)  ",
-    "build:pricer": "APP_NAME=pricer; docker build --build-arg APP_NAME=${APP_NAME} . -t jeantil/k8s-demo-${APP_NAME}:$(git describe --always --dirty)  ",
+    "build:cruder": "APP_NAME=cruder; docker build -f apps/ops/Dockerfile --build-arg APP_NAME=${APP_NAME} -t jeantil/k8s-demo-${APP_NAME}:$(git describe --always --dirty) . ",
+    "build:pricer": "APP_NAME=pricer; docker build -f apps/ops/Dockerfile --build-arg APP_NAME=${APP_NAME} -t jeantil/k8s-demo-${APP_NAME}:$(git describe --always --dirty) . ",
     "lint": "eslint --ext js --ext ts --ext tsx --ext jsx",
     "postinstall": "test -n \"$CI\" || husky install"
   }
