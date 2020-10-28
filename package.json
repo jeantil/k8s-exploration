@@ -12,11 +12,9 @@
     "@k8s-demo-byjean/tooling": "*"
   },
   "scripts": {
-    "build:cruder:prod": "yarn -cwd cruder build:prod",
-    "build:pricer:prod": "yarn -cwd pricer build:prod",
-    "build:cruder": "yarn -cwd cruder build",
-    "build:pricer": "yarn -cwd pricer build",
+    "build:cruder": "APP_NAME=cruder; docker build --build-arg APP_NAME=${APP_NAME} . -t jeantil/k8s-demo-${APP_NAME}:$(git describe --always --dirty)  ",
+    "build:pricer": "APP_NAME=pricer; docker build --build-arg APP_NAME=${APP_NAME} . -t jeantil/k8s-demo-${APP_NAME}:$(git describe --always --dirty)  ",
     "lint": "eslint --ext js --ext ts --ext tsx --ext jsx",
-    "postinstall": "husky install"
+    "postinstall": "test -n \"$CI\" || husky install"
   }
 }
