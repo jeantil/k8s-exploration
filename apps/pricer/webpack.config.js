@@ -6,11 +6,12 @@ module.exports = {
   target: 'node',
   externals: [
     nodeExternals({
-      additionalModuleDirs: ['../node_modules'],
+      additionalModuleDirs: ['../../node_modules'],
       allowlist: [/@k8s-demo-byjean/]
     })
   ],
   devtool: 'inline-source-map',
+  mode: 'development',
   module: {
     rules: [
       {
@@ -27,7 +28,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: 'cruder.js'
+    path: path.resolve(__dirname, '../../dist'),
+    filename: 'pricer.js'
   }
 };

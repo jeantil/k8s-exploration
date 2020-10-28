@@ -9,12 +9,12 @@ ARG APP_NAME
 COPY package.json yarn.lock ./
 COPY tsconfig.json ./
 COPY packages/ ./packages/
-COPY ${APP_NAME}/ ./${APP_NAME}
+COPY apps/${APP_NAME}/ ./apps/${APP_NAME}
 RUN CI=DOCKER yarn install --frozen-lockfile
-ENV NODE_ENV="development"
-RUN yarn --cwd ${APP_NAME} build:prod
+RUN yarn --cwd apps/${APP_NAME} build:prod
 RUN CI=DOCKER\
-    yarn --cwd ${APP_NAME} install --production --frozen-lockfile
+    yarn --cwd apps/${APP_NAME} install \
+    --production --frozen-lockfile
 
 FROM node:12-slim
 ARG APP_NAME
