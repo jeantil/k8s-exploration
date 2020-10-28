@@ -2,7 +2,7 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "modules/*"
   ],
   "engines": {
     "node": "12.x"

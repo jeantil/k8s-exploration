@@ -8,7 +8,7 @@ WORKDIR /usr/src
 ARG APP_NAME
 COPY package.json yarn.lock ./
 COPY tsconfig.json ./
-COPY packages/ ./packages/
+COPY modules/ ./modules/
 COPY apps/${APP_NAME}/ ./apps/${APP_NAME}
 RUN CI=DOCKER yarn install --frozen-lockfile
 RUN yarn --cwd apps/${APP_NAME} build:prod
