@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["src/**/*.ts", "../packages/**/*.ts"],
+  "exclude": ["../node_modules/**/*.*", "node_modules/**/*.*"],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "noEmit": false,
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "declaration": false
+  }
+}

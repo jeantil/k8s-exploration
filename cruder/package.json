@@ -1,8 +1,17 @@
 {
   "private": "true",
-  "name": "@k8s-demo-byjean/cruder-app",
+  "name": "cruder",
   "version": "1.0.0",
   "dependencies": {
     "@k8s-demo-byjean/http": "*"
+  },
+  "devDependencies": {
+    "@k8s-demo-byjean/tooling": "*"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "prod": "node dist/app.js",
+    "build:prod": "webpack --mode production",
+    "build": "webpack"
   }
 }
