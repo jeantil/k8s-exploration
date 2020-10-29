@@ -3,7 +3,7 @@
   "exclude": [],
   "compilerOptions": {
     "noEmit": true,
-    "target": "esnext",
+    "target": "ES2019",
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
